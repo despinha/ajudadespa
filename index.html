@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Despa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://substackcdn.com/image/fetch/$s_!Le41!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2026650-22b4-450d-a855-7b3aeb8fd5d2_1000x1000.png">
+    <style>
+        /* Ajuste de layout para alinhar abas e controles na mesma linha */
+        .controls-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 1200px; /* Alinhe com a largura máxima do seu container se houver */
+            padding: 0 20px;
+        }
+
+        .tabs-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: #eaeaea;
+        }
+
+        .tab-btn.active {
+            background-color: #007BFF;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        /* Sobrescreve/ajusta o controls-wrapper original para sumir com margens redundantes */
+        .controls-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0; 
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .search-container {
+            flex-grow: 1;
+            max-width: 400px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .controls-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .tabs-container {
+                justify-content: center;
+            }
+            .controls-wrapper {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="https://despatecnologia.com.br/assets/logo_colorido_branco.svg" alt="Descrição da imagem" width="150" height="60">
+    </header>
+
+
+        
+    <!-- Linha Única de Controles: Abas na esquerda, Pesquisa e Layout na direita -->
+    <div class="controls-row">
+        <div class="controls-wrapper">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar...">
+            </div>
+            <button id="viewToggleBtn" class="view-toggle-btn" title="Alternar formato de exibição">☰</button>
+        </div>
+
+     <div class="tabs-container">
+                <button id="btnDespafront" class="tab-btn active" onclick="switchService('despafront')">
+                    <img src="https://i.imgur.com/cvdsULe.png" alt="Descrição da imagem" width="35" height="35">Despafront</button>
+                <button id="btnDespadoc" class="tab-btn" onclick="switchService('despadoc')">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEw1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ues1ueu52JE/AAAAEnRSTlMAFYl+/1Dv+yzNcp4JueDARFkMBdnlAAAAz0lEQVR4AXzSVxLEIAwDUCUI8IZ+/8vuMCa96Pe5peCYaZ4nvMSQpHkk60jnSWdvJD/SL8BM8ifnZYFkiIAk9oTD6sVrudbI4voQjWQy21FTBIi9Pets0hsAda0xnj0c2HSZ67NsJlmWvKFAxhVSqP1ywEZaPUh3ACd0QHXa/4ARfW1F3z8/ogHi7JkfsWHK5CsKSf+F350B8oolwryga0B0z2gigMKB4o6I9QMJNPGEUvSP2VI3jOH4m2gkKY4/5p5CPv+a/4HTGXqixpsdAMm7C6SwU4IJAAAAAElFTkSuQmCC" alt="Descrição da imagem" width="30" height="30">Despadoc</button>
+                <button id="btnMyDesp" class="tab-btn" onclick="switchService('mydesp')">
+                    <img src="https://play-lh.googleusercontent.com/tkAJvE074IHke3TNY7MNBm8o80c-w7er6NI3Sbfl8LP8MmvwhHcgUlCRsK8E60n2WgESHxO6jNp9sd9JK3Cl=w240-h480" alt="Descrição da imagem" width="30" height="30">My Desp
+                </button>
+     </div>
+        <!-- Barra de Pesquisa e Botão de Alternância (Alinhados à Direita) -->
+        
+    </div>
+           
+            
+    <!-- Container principal com classe inicial 'grid-view' -->
+    <div class="container grid-view" id="topics-container">
+        <!-- Cards principais injetados via JS -->
+        <div id="noResults" class="no-results">Nenhum módulo encontrado para a sua busca.</div>
+    </div>
+
+    <!-- Janela Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header-bar">
+                <h2 class="modal-title" id="modal-title">Título do Módulo</h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            
+            <div class="modal-body-split">
+                <!-- Esquerda: Lista de Gavetas -->
+                <div class="sidebar-topics" id="sidebar-topics"></div>
+
+                <!-- Direita: Vídeo proporcional em cima, Explicação embaixo -->
+                <div class="content-display-area" id="content-display-area">
+                    <div class="placeholder-text">Selecione uma opção ao lado para visualizar o vídeo e a explicação.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 - Sistema Despa - Documentação Interna
+    </footer>
+
+    <!-- Importação dos três arquivos de dados externos -->
+    <script src="data.js"></script>
+
+
+    <script>
+        const container = document.getElementById('topics-container');
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const sidebarTopics = document.getElementById('sidebar-topics');
+        const contentDisplayArea = document.getElementById('content-display-area');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const viewToggleBtn = document.getElementById('viewToggleBtn');
+        
+        const btnDespafront = document.getElementById('btnDespafront');
+        const btnDespadoc = document.getElementById('btnDespadoc');
+        const btnMyDesp = document.getElementById('btnMyDesp');
+
+        // Estado do layout atual ('grid' ou 'list')
+        let currentView = 'grid';
+        
+        // Estado dos dados atuais. Aponta inicialmente para a variável do data.js
+        let currentData = systemData;
+
+        // Renderiza os cards baseado na fonte de dados ativa (currentData)
+        function renderCards() {
+    document.querySelectorAll('.card-topic').forEach(card => card.remove());
+
+    for (const [key, topic] of Object.entries(currentData)) {
+        const card = document.createElement('div');
+        card.className = 'card-topic';
+        card.setAttribute('data-title', topic.title.toLowerCase());
+
+        let iconContent = "";
+        
+        // CORREÇÃO: Se a string começar com "<svg", renderiza o HTML diretamente
+        if (topic.icon.trim().startsWith('<svg')) {
+            iconContent = topic.icon;
+        } 
+        // Se for um link de imagem tradicional
+        else if (topic.icon.includes('/') || topic.icon.includes('.')) {
+            iconContent = `<img src="${topic.icon}" alt="${topic.title}">`;
+        } 
+        // Se for um emoji ou texto simples
+        else {
+            iconContent = topic.icon;
+        }
+
+        card.innerHTML = `
+            <div class="card-icon">${iconContent}</div>
+            <h3>${topic.title}</h3>
+        `;
+        card.onclick = () => openModal(key);
+        container.insertBefore(card, noResults);
+    }
+}
+
+
+        // Alterna entre as bases de dados e limpa a barra de busca
+        function switchService(service) {
+            searchInput.value = ''; // Limpa a busca anterior
+            noResults.style.display = 'none';
+
+            // Remove a classe active de todos
+            btnDespafront.classList.remove('active');
+            btnDespadoc.classList.remove('active');
+            btnMyDesp.classList.remove('active');
+
+            if (service === 'despafront') {
+                btnDespafront.classList.add('active');
+                currentData = systemData; // data.js
+            } else if (service === 'despadoc') {
+                btnDespadoc.classList.add('active');
+                currentData = systemData2; // data2.js
+            } else if (service === 'mydesp') {
+                btnMyDesp.classList.add('active');
+                currentData = systemData3; // data3.js
+            }
+            
+            renderCards();
+        }
+
+        // Inicializa os cards na primeira abertura da página
+        renderCards();
+
+        // Lógica de Alternância de Layout (Grid <-> Lista)
+        viewToggleBtn.onclick = () => {
+            if (currentView === 'grid') {
+                currentView = 'list';
+                container.classList.remove('grid-view');
+                container.classList.add('list-view');
+                viewToggleBtn.innerHTML = '⊞';
+                viewToggleBtn.title = "Mudar para visualização em grade";
+            } else {
+                currentView = 'grid';
+                container.classList.remove('list-view');
+                container.classList.add('grid-view');
+                viewToggleBtn.innerHTML = '☰';
+                viewToggleBtn.title = "Mudar para visualização em lista";
+            }
+        };
+
+        // Lógica de Filtro da Pesquisa
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.card-topic');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title');
+                if (title.includes(term)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        });
+
+        function openModal(topicKey) {
+            const topic = currentData[topicKey]; // Busca no arquivo ativo
+            modalTitle.textContent = topic.title;
+            sidebarTopics.innerHTML = '';
+            contentDisplayArea.innerHTML = `<div class="placeholder-text">Selecione uma opção ao lado para visualizar o vídeo e a explicação.</div>`;
+
+            topic.functions.forEach((func, index) => {
+                const item = document.createElement('div');
+                item.className = 'sidebar-item';
+                item.textContent = func.name;
+
+                item.onclick = () => {
+                    document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
+                    item.classList.add('active');
+
+                    contentDisplayArea.innerHTML = `
+                        <div class="video-wrapper">
+                            <iframe src="${func.videoUrl}" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="explanation-box">
+                            <h3>${func.name}</h3>
+                            <p>${func.summary}</p>
+                        </div>
+                    `;
+                };
+
+                sidebarTopics.appendChild(item);
+
+                if (index === 0) {
+                    item.click();
+                }
+            });
+
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
