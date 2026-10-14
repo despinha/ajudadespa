@@ -1,16 +1,58 @@
 const systemData = {
+
+    /*Treinamento: {
+        title: "Treinamento",
+        icon: "img/despafront/Treinamento.webp",
+        functions: [
+            {
+                name: "1 • Orçamento",
+                summary: "Como montar uma proposta comercial com os serviços de despachante e taxas para o cliente.",
+                videoUrl: ""
+            },
+            {
+                name: "2 • Processo Rápido",
+                summary: "Entenda a ferramenta criada para agilizar o lançamento e como utilizar o atalho para dar entrada e finalizar processos com maior eficiência.",
+                videoUrl: ""
+            },
+            {
+                name: "3 • Envios",
+                summary: "Como realizar os envios dos processos e como acompanhar o status e a situação dos processos que já foram enviados.",
+                videoUrl: ""
+            },
+            {
+                name: "3 • Proprietário",
+                summary: "Como registrar dados pessoais, documentos (CPF/CNPJ) e endereços dos proprietários de veículos. E como atualizar informações cadastrais, telefones e endereços de clientes e proprietários existentes.",
+                videoUrl: ""
+            },
+            {
+                name: "4 • Veículo",
+                summary: "Como registrar dados como placa, Renavam, chassi, marca, modelo e ano no sistema. E como modificar características, dados de registro ou vincular alterações aos veículos já salvos.",
+                videoUrl: ""
+            },
+            {
+                name: "5 • O.S",
+                summary: "Como abrir uma nova Ordem de Serviço, alterar dados, adicionar observações ou modificar uma Ordem de Serviço em andamento. Além de como gerenciar, incluir ou remover taxas e serviços específicos dentro da Ordem de Serviço.",
+                videoUrl: ""
+            },
+            {
+                name: "6 • Mala Direta",
+                summary: "Passo a passo de operação da ferramenta de envio em massa de mensagens ou avisos",
+                videoUrl: ""
+            }
+        ]
+    }, */
         Team: {
         title: "TeamViewer",
         icon: "img/despafront/TEAM_VIEWER.webp",
         functions: [
             {
                 name: "O que é o TeamViewer?",
-                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                summary: "Entenda a ferramenta de acesso remoto utilizada para prestar suporte técnico ágil e manutenções à distância.",
                 videoUrl: "https://drive.google.com/file/d/18VvbuXHG2R1h8GQoTfaiNlBaftkB7sN1/preview"
             },
             {
                 name: "Como usar o TeamViewer",
-                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                summary: "Passo a passo de como iniciar a conexão remota, informar o ID e a senha para habilitar o suporte.",
                 videoUrl: "https://drive.google.com/file/d/1B5AIM2vKR3bhzXm10V6hqGguL4hp3Jdb/preview"
             }
         ]
@@ -22,8 +64,8 @@ const systemData = {
         functions: [
             {
                 name: "O que é o Whatsapp Suporte?",
-                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
-                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+                summary: "Canal direto de atendimento rápido com a equipe de suporte para tirar dúvidas e resolver chamados do sistema,",
+                videoUrl: "https://drive.google.com/file/d/1IXhCCdbwuK0_f92FyZy98v90_l74E3r5/preview"
             }
         ]
     },
@@ -33,15 +75,14 @@ const systemData = {
         functions: [
             {
                 name: "Como consultar",
-                summary: "Utilizado para dar baixa em pagamentos de clientes, registrar entradas de dinheiro, PIX, cartões ou boletos referentes a vendas.",
-                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+                summary: "Como realizar consultas de veículos e cadastros diretamente na base de dados estadual do Detran.",
+                videoUrl: "https://drive.google.com/file/d/1Nhcw1m9v3Ix8gTd3otgDRbSK6WAN2X-d/preview"
             }
         ]
     },
 
 
-
-    OEs: {
+    /*OEs: {
         title: "Base Outros Estados",
         icon: "img/despafront/BASE_OUTROS_ESTADOS.webp",
         functions: [
@@ -111,32 +152,14 @@ const systemData = {
             }
         ]
     },
-
-    CRLV: {
-        title: "Emissão de CRLV",
-        icon: "img/despafront/EMISSAOCRLV.webp",
-        functions: [
-            {
-                name: "Como emitir CRLV",
-                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
-                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
-            }
-        ]
-    },
-
     EmisCLV: {
         title: "Emissão CRLV-e",
         icon: "img/despafront/EMISSAOCRLV.webp",
         functions: [
             {
-                name: "O que é o TeamViewer?",
+                name: "Como emitir o CRLV-e?",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/18VvbuXHG2R1h8GQoTfaiNlBaftkB7sN1/preview"
-            },
-            {
-                name: "Como usar o TeamViewer",
-                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
-                videoUrl: "https://drive.google.com/file/d/1B5AIM2vKR3bhzXm10V6hqGguL4hp3Jdb/preview"
             }
         ]
     },
@@ -146,7 +169,7 @@ const systemData = {
         icon: "img/despafront/situacao_licenciamento.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como consultar?",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -157,7 +180,7 @@ const systemData = {
         icon: "img/despafront/bloqueio_detran.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como consultar",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -168,18 +191,48 @@ const systemData = {
         icon: "img/despafront/bloqueio_renajud.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como consultar",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
         ]
-    },
+    }, */
         ProcessoRap: {
         title: "Processo Rápido",
         icon: "img/despafront/PROCESSO_RAPIDO.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "O que é o Processo rapido?",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Dados Iniciais",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Proprietário",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Contato",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "O.S",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Veículo",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Impressões",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -190,7 +243,12 @@ const systemData = {
         icon: "img/despafront/PROPRIETARIO.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como cadastrar proprietário",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como editar proprietário já cadastrado",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -201,7 +259,12 @@ const systemData = {
         icon: "img/despafront/VEICULO_.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como cadastrar veículo",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como editar veículo já cadastrado",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -212,7 +275,22 @@ const systemData = {
         icon: "img/despafront/OS.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como cadastrar OS",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como receber OS",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como editar OS já cadastrada",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Itens de Serviço OS",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -223,7 +301,12 @@ const systemData = {
         icon: "img/despafront/ENVIO_LOTE.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como realizar envios",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Consultar andamento de processo",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -234,7 +317,12 @@ const systemData = {
         icon: "img/despafront/ORCAMENTO.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como fazer um Orçamento",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Itens de Serviço Orçamento",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -245,18 +333,33 @@ const systemData = {
         icon: "img/despafront/MD_FINAL_PLACA.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "O que é a Mala Direta",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
-            }
+            },
+            {
+                name: "Como usar Mala Direta",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Licenciamento com Mala Direta",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Whatsapp Mala Direta",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
         ]
-    },
-        caixa1: {
+    }, 
+       /* caixa1: {
         title: "Caixa",
         icon: "img/despafront/CAIXA.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "Como funciona o caixa",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -264,10 +367,20 @@ const systemData = {
     },
         Contasareceber: {
         title: "Contas a Receber",
-        icon: "img/despafront/CONTAS_A_PAGAR.webp",
+        icon: "img/despafront/CONTAS_A_RECEBER.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "O que é Contas a Receber",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como cadastar um Conta a Receber",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como Receber uma Conta",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
@@ -275,15 +388,25 @@ const systemData = {
     },
         Contasapagar: {
         title: "Contas a Pagar",
-        icon: "img/despafront/CONTAS_A_RECEBER.webp",
+        icon: "img/despafront/CONTAS_A_PAGAR.webp",
         functions: [
             {
-                name: "O que é o Whatsapp Suporte?",
+                name: "O que é Contas a Pagar",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como cadastar um Conta a Pagar",
+                summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
+                videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
+            },
+            {
+                name: "Como Pagar uma Conta",
                 summary: "Como registrar dados pessoais, endereços, limite de crédito e acompanhar o histórico de compras de cada cliente.",
                 videoUrl: "https://drive.google.com/file/d/SEU_ID_DO_DRIVE_AQUI/preview"
             }
         ]
-    },
+    }, */
 };
 
 
